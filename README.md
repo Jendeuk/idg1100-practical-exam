@@ -61,7 +61,9 @@ $ git remote add origin <remote repository link here>
 $ git add .
 $ git commit -m "first commit"
 $ git branch -M main
+$ git push -u origin main
 ```
+- Note: the ssh key used for the git user shouldn't have a password either for this to work
 
 ## Features implemented
 All the main features are implemented as expected, further some other optional features are also implemented such as:
