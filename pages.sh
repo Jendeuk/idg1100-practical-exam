@@ -7,6 +7,8 @@ rootdir="pages"
 dir="news-$date"
 mkdir -p "$rootdir/$dir"
 echo "[*] CREATING PAGES"
+dirname=`dirname "$0"`
+cd $dirname
 
 # Fetches the current first three news articles
 numpages=`ls -1 $scrapedir/$dir | wc -l`
@@ -49,3 +51,5 @@ do
 	</html>
 	" > $htmlFile
 done
+# Run overview script
+./overview.sh

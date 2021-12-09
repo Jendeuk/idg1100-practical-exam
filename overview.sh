@@ -3,6 +3,8 @@
 # Overview script
 echo "[*] CREATING OVERVIEW PAGE"
 pagesdir="pages"
+dirname=`dirname "$0"`
+cd $dirname
 
 # Recursively get all files from generated pages
 # By using ls -t we get the files sorted by modification time, meaning by date.

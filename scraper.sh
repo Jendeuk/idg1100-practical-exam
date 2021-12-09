@@ -6,6 +6,8 @@ date=`date +%Y-%m-%d-%H%M`
 datetime=`date "+%Y-%m-%d %H:%M"`
 echo "[*] SCRAPING"
 echo $date
+dirname=`dirname "$0"`
+cd $dirname
 
 # Create a new directory storing the information about the news articles
 rootdir="scraped-news"
