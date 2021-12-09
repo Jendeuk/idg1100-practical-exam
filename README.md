@@ -35,6 +35,7 @@ The news website has to be scraped every 6 hours, and to achieve this crontab is
 
 ### 7. The deployment script (deployment.sh)
 The deployment script configures a blank installation with all that is necessary for thep roject to work. Things it'll take care of are the following:
+- Installing dependencies
 - Fetches the git repository from GitHub
 - Placing all scripts in the right directory
 - Generating all directories needed for the script to work properly
@@ -59,6 +60,6 @@ All the main features are implemented as expected, further some other optional f
 > - [x] 🌟 On days with even numbers read news from https://www.tv2.no/sport/ 
 > - [x] 🌟🌟 Also retrieve a summary of each news article and add it as a fifth line in the information files. 
 > - [x] 🌟 Sort the news articles by date, with the most recent first 
-> - [ ] (OPTIONAL 🌟🌟) The repo update script pushes all new files and the updated files to a GitHub repository.  
-> - [ ] (OPTIONAL 🌟) The deployment script configures a blank installation of Raspberry Pi OS with all that is necessary for the project to work.
+> - [x] (OPTIONAL 🌟🌟) The repo update script pushes all new files and the updated files to a GitHub repository.  
+> - [x] (OPTIONAL 🌟) The deployment script configures a blank installation of Raspberry Pi OS with all that is necessary for the project to work.
 
