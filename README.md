@@ -45,7 +45,7 @@ The deployment script configures a blank installation with all that is necessary
 ## Getting started
 1. After configuring the raspberry PI, clone the project repository and navigate to the project file:
 ```sh
-$ git clone ...
+$ git clone git@github.com:Jendeuk/idg1100-practical-exam.git
 $ cd idg1100
 ```
 2. Run the deployment script with:
