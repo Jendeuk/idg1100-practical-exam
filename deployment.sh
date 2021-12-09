@@ -7,8 +7,8 @@ sudo apt-get install nginx
 sudo nginx
 
 # Fetches the git repository from GitHub
-#git clone git@github.com:Jendeuk/idg1100-practical-exam.git
-#cd idg1100-practical-exam
+git clone git@github.com:Jendeuk/idg1100-practical-exam.git
+cd idg1100-practical-exam
 
 # Placing all scripts in the right directory
 sudo cp scraper.sh /var/www/html/
@@ -28,4 +28,4 @@ sudo rm -f /etc/nginx/sites-enabled/default
 sudo ln -sf /etc/nginx/sites-available/server /etc/nginx/sites-enabled/server
 
 # Setting up the crontab
-#./crontab.sh
+./crontab.sh
