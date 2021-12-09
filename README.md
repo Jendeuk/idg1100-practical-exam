@@ -31,10 +31,10 @@ The repo update script commits all the new and changed files to the local git re
 In order to serve the generated HTML files, a Nginx server has to be properly set up. The followed nginx configuration file follows the Debian/Ubuntu conventions and is automatically set up and copied over to the system when running the deployment script.
 
 ### 6. The crontab entries script (crontab.sh)
-The news website has to be scraped every 6 hours, and to achieve this crontab is used. This script sets up the crontab for just that.
+The news website has to be scraped every 6 hours, and to achieve this crontab is used. This script sets up the 2 cron jobs for just that (the first one for scraping and the second for update repo). This script will only work if the user has successfully setup git and added the remote repository link at `/var/www/html/`.
 
 ### 7. The deployment script (deployment.sh)
-The deployment script configures a blank installation with all that is necessary for thep roject to work. Things it'll take care of are the following:
+The deployment script configures a blank installation with all that is necessary for the project to work. Things it'll take care of are the following:
 - Installing dependencies
 - Fetches the git repository from GitHub
 - Placing all scripts in the right directory
@@ -53,6 +53,15 @@ $ cd idg1100
 $ chmod +x deployment.sh
 $ ./deployment.sh
 ```
+3. (Optional) For the repo to work, setup a local repository at `/var/www/html/` and link it to a remote by:
+```sh
+$ cd /var/www/html
+$ git init
+$ git remote add origin <remote repository link here>
+$ git add .
+$ git commit -m "first commit"
+$ git branch -M main
+```
 
 ## Features implemented
 All the main features are implemented as expected, further some other optional features are also implemented such as:
@@ -60,6 +69,6 @@ All the main features are implemented as expected, further some other optional f
 > - [x] 🌟 On days with even numbers read news from https://www.tv2.no/sport/ 
 > - [x] 🌟🌟 Also retrieve a summary of each news article and add it as a fifth line in the information files. 
 > - [x] 🌟 Sort the news articles by date, with the most recent first 
-> - [x] (OPTIONAL 🌟🌟) The repo update script pushes all new files and the updated files to a GitHub repository.  
-> - [x] (OPTIONAL 🌟) The deployment script configures a blank installation of Raspberry Pi OS with all that is necessary for the project to work.
+> - [x] 🌟🌟 The repo update script pushes all new files and the updated files to a GitHub repository.  
+> - [x] 🌟 The deployment script configures a blank installation of Raspberry Pi OS with all that is necessary for the project to work.
 
