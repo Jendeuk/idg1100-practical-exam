@@ -12,7 +12,7 @@ cd $dirname
 
 # Fetches the current first three news articles
 numpages=`ls -1 $scrapedir/$dir | wc -l`
-for ((i=1; i<"$numpages"; i++))
+for ((i=1; i<="$numpages"; i++))
 do
 	file="$scrapedir/$dir/news$i.txt"
 	# Title of the news article
